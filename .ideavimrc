@@ -1,0 +1,54 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+"" use system clipboard
+set clipboard+=unnamed
+
+" Do incremental searching.
+set incsearch
+
+let mapleader = " "
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+map L $
+map H 0 
+map J <C-D>
+map K <C-U>
+
+map <leader>b <Action>(GotoDeclaration)
+map <leader>i <Action>(ToggleBool)
+map <leader>q <Action>(CloseEditor)
+map <leader>k <Action>(QuickJavaDoc)
+map ]e <Action>(GotoNextError)
+map [e <Action>(GotoNextError)
+map <A-J> <Action>(MoveLineDown)
+map <A-K> <Action>(MoveLineUp)
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+map <leader>r <Action>(RenameElement)
+
+"" Map <leader>d to start debug
+map <leader>d <Action>(Debug)
+
+nmap f <Action>(AceAction)
+nmap <leader>w <Action>(SaveDocument)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
