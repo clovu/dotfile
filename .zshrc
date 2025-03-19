@@ -73,6 +73,9 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 plugins=(
   git
   zsh-autosuggestions
@@ -118,6 +121,7 @@ source $ZSH/oh-my-zsh.sh
 # export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # Initialize starship, The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+# brew install starship
 eval "$(starship init zsh)"
 
 # Disable auto-setting of 'packageManager' when corepack is enabled.
