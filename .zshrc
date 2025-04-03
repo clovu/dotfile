@@ -130,6 +130,7 @@ export COREPACK_ENABLE_AUTO_PIN=0
 # This is a small command-line program for OS X that moves files or folders to the trash.
 # install: brew install trash
 # repo: https://github.com/ali-rantakari/trash
+# I think I should have received enough lessons. :(
 alias rm="trash"
 
 # -------------------------------- #
