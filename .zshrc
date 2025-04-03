@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# JDK, I am currently using brew to manage JDK.
+# JDK, I am currently using brew to manage JDK. (trying brew to version-control right now)
 # export JAVA_HOME=~/jdk/default/Contents/Home
 # export PATH=$JAVA_HOME/bin:$PATH:.
 # export CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
@@ -126,3 +126,28 @@ eval "$(starship init zsh)"
 
 # Disable auto-setting of 'packageManager' when corepack is enabled.
 export COREPACK_ENABLE_AUTO_PIN=0
+
+# This is a small command-line program for OS X that moves files or folders to the trash.
+# install: brew install trash
+# repo: https://github.com/ali-rantakari/trash
+alias rm="trash"
+
+# -------------------------------- #
+# Directories
+#
+# I put
+# `~/projects/i` for my projects
+# `~/projects/r` for reproductions
+# -------------------------------- #
+
+function i() {
+  cd ~/projects/i/$1
+}
+
+function repros() {
+  cd ~/projects/r/$1
+}
+
+function dir() {
+  mkdir -p $1 && cd $1
+}
